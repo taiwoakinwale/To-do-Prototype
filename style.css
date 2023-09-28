@@ -13,19 +13,27 @@ p {
 
 .main {
 	background-color: #f0f5f9;
-	width: fit-content;
+	width: 20%;
 	text-align: center;
 	margin: auto;
 	/* Gotten from W3school */
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.profile {
+#accordionFlushExampletodo {
 	background-color: #f0f5f9;
+	margin: 0 auto 0 auto;
+	width: 20%;
+	text-align: center;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.profile {
+	/* background-color: #f0f5f9; */
 	margin: 0 auto 0 auto;
 	padding-left: 50px;
 	padding-right: 50px;
-	width: fit-content;
+	width: 20%;
 	text-align: center;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -33,16 +41,20 @@ p {
 .tasks {
 	background-color: #f0f5f9;
 	margin: 50px auto 0 auto;
-	padding: 5px 50px;
+	padding: 5px 10px;
 	width: fit-content;
 	text-align: center;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#abandon {
+.greenaccent {
 	accent-color: #92b273;
 }
 
 .lined {
 	text-decoration: line-through;
+}
+
+.accordion-header {
+	background-image: none;
 }
