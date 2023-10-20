@@ -13,7 +13,7 @@ p {
 
 .main {
 	background-color: #f0f5f9;
-	width: 20%;
+	width: 400px;
 	text-align: center;
 	margin: auto;
 	/* Gotten from W3school */
@@ -23,7 +23,7 @@ p {
 #accordionFlushExampletodo {
 	background-color: #f0f5f9;
 	margin: 0 auto 0 auto;
-	width: 20%;
+	width: 400px;
 	text-align: center;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
