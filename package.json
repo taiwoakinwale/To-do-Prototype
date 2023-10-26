@@ -1,0 +1,22 @@
+{
+  "name": "lab6",
+  "version": "1.0.0",
+  "description": "package.json that was created for lab 6",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taiwoakinwale/To-do-Prototype.git"
+  },
+  "author": "Taiwo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/taiwoakinwale/To-do-Prototype/issues"
+  },
+  "homepage": "https://github.com/taiwoakinwale/To-do-Prototype#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

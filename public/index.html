@@ -13,7 +13,7 @@
 		<style>
 			@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 		</style>
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="css/style.css" />
 		<title>Todo List</title>
 	</head>
 	<body>
@@ -41,7 +41,7 @@
 					>
 						<div class="accordion-body">
 							<h1>Log In</h1>
-							<form action="">
+							<form action="/todo" method="POST">
 								<div class="mb-3">
 									<label for="exampleFormControlInput1" class="form-label"
 										>Email address</label
@@ -51,6 +51,7 @@
 										class="form-control"
 										id="exampleFormControlInput1"
 										placeholder="Email address"
+										name="username"
 									/>
 								</div>
 								<div class="mb-3">
@@ -62,11 +63,11 @@
 										class="form-control"
 										id="exampleFormControlInput2"
 										placeholder="password"
+										name="password"
 									/>
 								</div>
+								<input type="submit" class="btn btn-primary" value="Login">
 							</form>
-
-							<button type="button" class="btn btn-primary">Login</button>
 						</div>
 					</div>
 				</div>
@@ -92,35 +93,35 @@
 							<h1>Sign up</h1>
 							<form action="">
 								<div class="mb-3">
-									<label for="exampleFormControlInput1" class="form-label"
+									<label for="signupemail" class="form-label"
 										>Email address</label
 									>
 									<input
 										type="email"
 										class="form-control"
-										id="exampleFormControlInput1"
+										id="signupemail"
 										placeholder="Email address"
 									/>
 								</div>
 								<div class="mb-3">
-									<label for="exampleFormControlInput2" class="form-label"
+									<label for="signuppassword" class="form-label"
 										>Password</label
 									>
 									<input
 										type="password"
 										class="form-control"
-										id="exampleFormControlInput2"
+										id="signuppassword"
 										placeholder="password"
 									/>
 								</div>
 								<div class="mb-3">
-									<label for="exampleFormControlInput1" class="form-label"
+									<label for="signupauthentication" class="form-label"
 										>Authentication</label
 									>
 									<input
 										type="text"
 										class="form-control"
-										id="exampleFormControlInput1"
+										id="signupauthentication"
 										placeholder="Authentication"
 									/>
 								</div>
