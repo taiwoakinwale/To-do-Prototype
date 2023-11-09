@@ -41,7 +41,7 @@
 					>
 						<div class="accordion-body">
 							<h1>Log In</h1>
-							<form action="/todo" method="POST">
+							<form action="/login" method="POST">
 								<div class="mb-3">
 									<label for="exampleFormControlInput1" class="form-label"
 										>Email address</label
@@ -91,7 +91,7 @@
 					>
 						<div class="accordion-body">
 							<h1>Sign up</h1>
-							<form action="">
+							<form action="/register" method="POST">
 								<div class="mb-3">
 									<label for="signupemail" class="form-label"
 										>Email address</label
@@ -101,6 +101,7 @@
 										class="form-control"
 										id="signupemail"
 										placeholder="Email address"
+										name="signupusername"
 									/>
 								</div>
 								<div class="mb-3">
@@ -112,6 +113,7 @@
 										class="form-control"
 										id="signuppassword"
 										placeholder="password"
+										name="signuppassword"
 									/>
 								</div>
 								<div class="mb-3">
@@ -123,10 +125,11 @@
 										class="form-control"
 										id="signupauthentication"
 										placeholder="Authentication"
+										name="sighupauthentication"
 									/>
 								</div>
+								<input type="submit" value="signup" class="btn btn-primary">
 							</form>
-							<button type="button" class="btn btn-primary">Sign Up</button>
 						</div>
 					</div>
 				</div>

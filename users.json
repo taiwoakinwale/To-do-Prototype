@@ -1,3 +1,4 @@
-{
-   "users": [{"username":"example@something.com","password":"example"}]
-}
+{"users":[
+   {"username":"first@something.com","password":"example"},
+   {"username":"second@something.com","password":"example1"}
+]}
