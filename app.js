@@ -9,7 +9,7 @@ require("dotenv").config();
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(session({
-    secret: process.env.SECRET,
+    secret: process.env.AUTH,
     resave: false,
     saveUninitialized: false
 }));
@@ -61,86 +61,6 @@ passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-User.insertMany(
-  [
-    {
-      _id: 0,
-      username: "first@something.com",
-      password: "example",
-    },
-    {
-      _id: 1,
-      username: "second@something.com",
-      password: "example1",
-    },
-  ],
-  (err) => {
-    if (err) {
-      console.log(err);
-    }
-  }
-);
-
-Task.insertMany(
-  [
-    {
-      _id: 0,
-      text: "example",
-      state: "unclaimed",
-      creator: "first@something.com",
-      isTaskClaimed: false,
-      claimingUser: null,
-      isTaskDone: false,
-      isTaskCleared: false,
-    },
-    {
-      _id: 1,
-      text: "example 1",
-      state: "unclaimed",
-      creator: "first@something.com",
-      isTaskClaimed: false,
-      claimingUser: null,
-      isTaskDone: false,
-      isTaskCleared: false,
-    },
-    {
-      _id: 2,
-      text: "example 2",
-      state: "claimed",
-      creator: "first@something.com",
-      isTaskClaimed: true,
-      claimingUser: "second@something.com",
-      isTaskDone: false,
-      isTaskCleared: false,
-    },
-    {
-      _id: 3,
-      text: "example 3",
-      state: "unclaimed",
-      creator: "first@something.com",
-      isTaskClaimed: false,
-      claimingUser: null,
-      isTaskDone: false,
-      isTaskCleared: false,
-    },
-    {
-      _id: 4,
-      text: "example 4",
-      state: "claimed",
-      creator: "first@something.com",
-      isTaskClaimed: true,
-      claimingUser: "second@something.com",
-      isTaskDone: true,
-      isTaskCleared: true,
-    }
-  ],
-  (err) => {
-    if (err) {
-      console.log(err);
-    }
-  }
-);
-
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
   });
@@ -184,7 +104,7 @@ app.post( "/login", ( req, res ) => {
 
 app.post( "/register", (req, res) => {
     console.log( "User " + req.body.username + " is attempting to register" );
-    if(req.body.auth == "todo2023"){
+    if(req.body.auth == session.secret){
         User.register({ username : req.body.username }, 
                         req.body.password, 
                         ( err, user ) => {
