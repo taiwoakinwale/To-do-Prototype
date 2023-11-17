@@ -184,7 +184,7 @@ app.post( "/login", ( req, res ) => {
 
 app.post( "/register", (req, res) => {
     console.log( "User " + req.body.username + " is attempting to register" );
-    if(req.body.auth == "todo2021"){
+    if(req.body.auth == "todo2023"){
         User.register({ username : req.body.username }, 
                         req.body.password, 
                         ( err, user ) => {
@@ -205,7 +205,7 @@ app.post( "/register", (req, res) => {
 });
 
 app.get( "/todo", async( req, res ) => {
-    console.log("A user is accessing the todo route using get, and...");
+    console.log("Going to todo");
     if ( req.isAuthenticated() ){
         try {
             console.log( "was authorized" );
@@ -297,7 +297,7 @@ app.post("/unfinish", async(req, res) => {
 });
 
 app.post("/purge", async(req, res) => {
-    console.log("PURGE")
+    console.log("purge")
     const results = await Task.find();
     
     for (let i = 0; i < results.length; i ++){

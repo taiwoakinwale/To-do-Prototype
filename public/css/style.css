@@ -1,60 +1,46 @@
 body {
-	padding-top: 70px;
+	text-align: center;
 	font-family: "Poppins", sans-serif;
 }
 
-h1 {
-	text-align: center;
+.accordion{
+    padding-left: 35%;
+    padding-right: 35%;
 }
 
-p {
-	font-size: 20px;
+.smallaccordion{
+    padding-left: 35%;
+    padding-right: 35%;
+    text-align: center;
 }
 
-.main {
-	background-color: #f0f5f9;
-	width: 400px;
-	text-align: center;
-	margin: auto;
-	/* Gotten from W3school */
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+h1{
+    text-align: center;
 }
 
-#accordionFlushExampletodo {
-	background-color: #f0f5f9;
-	margin: 0 auto 0 auto;
-	width: 400px;
-	text-align: center;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+section {
+    background-color:#E8EEFE;
+    width: 40%;
+    height: 50%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 2%;
 }
 
-.profile {
-	/* background-color: #f0f5f9; */
-	margin: 0 auto 0 auto;
-	padding-left: 50px;
-	padding-right: 50px;
-	width: 20%;
-	text-align: center;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+span{
+    text-align: center;
+    padding-left: 120px; 
 }
 
-.tasks {
-	background-color: #f0f5f9;
-	margin: 50px auto 0 auto;
-	padding: 5px 10px;
-	width: fit-content;
-	text-align: center;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.comptask{
+    text-decoration: line-through;
+    text-decoration-color: #7c7c84;
 }
 
-.greenaccent {
-	accent-color: #92b273;
-}
-
-.lined {
-	text-decoration: line-through;
-}
-
-.accordion-header {
-	background-image: none;
+.nobutton{
+    padding-bottom: 16px;
 }
