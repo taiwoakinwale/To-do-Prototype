@@ -22,72 +22,70 @@
 <br><br>
 
 <section id="tasklist">
-    <% for (let i = 0; i < tasks["tasks"].length; i ++){%>
+    <% for (let i = 0; i < tasks.length; i ++){%>
 
-
-    
-        <% if( tasks["tasks"][i].state == "unclaimed") { %>
+        <% if( tasks[i].state == "unclaimed") { %>
             <div> 
                 <form class="input-group mb-3" action="/claim" method="POST">
-                    <input type="hidden" name="_id" value= '<%= tasks["tasks"][i]._id %>'>
+                    <input type="hidden" name="_id" value= '<%= tasks[i]._id %>'>
                     <input type="hidden" name="username" value= '<%= username %>'>
-                    <input type="text" class="form-control" value= '<%= tasks["tasks"][i].text %>' readonly>
+                    <input type="text" class="form-control" value= '<%= tasks[i].text %>' readonly>
                     <input type="submit" class="btn btn-outline-secondary" id="claim" value="Claim">
                 </form>
             </div>
         <% } %>
 
-        <% if(tasks["tasks"][i].isTaskClaimed == true 
-                && tasks["tasks"][i].claimingUser == username 
-                && tasks["tasks"][i].isTaskDone == false 
-                && tasks["tasks"][i].isTaskCleared == false) { %>
+        <% if(tasks[i].isTaskClaimed == true 
+                && tasks[i].claimingUser == username 
+                && tasks[i].isTaskDone == false 
+                && tasks[i].isTaskCleared == false) { %>
 
             <div> 
                 <form class="input-group mb-3" action="/abandonorcomplete" method="POST">
                     <div class="input-group-text"> 
                         <input class="form-check-input mt-0" name='cbox' value="cbox" type="checkbox" onChange="this.form.submit()">
                     </div>
-                    <input type="hidden" name="_id" value= '<%= tasks["tasks"][i]._id %>'>
+                    <input type="hidden" name="_id" value= '<%= tasks[i]._id %>'>
                     <input type="hidden" name="username" value= '<%= username %>'>
-                    <input type="text" class="form-control" aria-label="task" value='<%= tasks["tasks"][i].text %>' readonly>
+                    <input type="text" class="form-control" aria-label="task" value='<%= tasks[i].text %>' readonly>
                     <input type="submit" class="btn btn-outline-secondary" id="abandon" value="Abandon">
                 </form>
             </div>
 
         <% } %>
 
-        <% if( tasks["tasks"][i].isTaskClaimed == true 
-                && tasks["tasks"][i].claimingUser == username 
-                && tasks["tasks"][i].isTaskDone == true 
-                && tasks["tasks"][i].isTaskCleared == false) { %>
+        <% if( tasks[i].isTaskClaimed == true 
+                && tasks[i].claimingUser == username 
+                && tasks[i].isTaskDone == true 
+                && tasks[i].isTaskCleared == false) { %>
             <div class="comptask">
                 <form class="input-group mb-3; nobutton" action="/unfinish" method="POST">
                     <div class="input-group-text">
                         <input class="form-check-input mt-0" type="checkbox" checked onChange="this.form.submit()"> 
                     </div> 
-                    <input type="hidden" name="_id" value= '<%= tasks["tasks"][i]._id %>'>
+                    <input type="hidden" name="_id" value= '<%= tasks[i]._id %>'>
                     <input type="hidden" name="username" value= '<%= username %>'>
-                    <input type="text" class="form-control" aria-label="task" value='<%= tasks["tasks"][i].text %>' readonly>
+                    <input type="text" class="form-control" aria-label="task" value='<%= tasks[i].text %>' readonly>
                 </form>
             </div>
         <% } %>
 
-        <% if( tasks["tasks"][i].isTaskClaimed == true 
-                && tasks["tasks"][i].claimingUser != username 
-                && tasks["tasks"][i].isTaskDone == false 
-                && tasks["tasks"][i].isTaskCleared == false) { %>
+        <% if( tasks[i].isTaskClaimed == true 
+                && tasks[i].claimingUser != username 
+                && tasks[i].isTaskDone == false 
+                && tasks[i].isTaskCleared == false) { %>
             <div class="input-group mb-3; nobutton">
-                <input type="text" class="form-control" value='<%= tasks["tasks"][i].text %>' readonly>
+                <input type="text" class="form-control" value='<%= tasks[i].text %>' readonly>
             </div>
         <% } %>
 
-        <% if( tasks["tasks"][i].isTaskClaimed == true 
-                && tasks["tasks"][i].claimingUser != username 
-                && tasks["tasks"][i].isTaskDone == true 
-                && tasks["tasks"][i].isTaskCleared == false) { %>
+        <% if( tasks[i].isTaskClaimed == true 
+                && tasks[i].claimingUser != username 
+                && tasks[i].isTaskDone == true 
+                && tasks[i].isTaskCleared == false) { %>
             <div class="comptask">
                 <div class="input-group mb-3; nobutton">
-                    <input type="text" class="form-control" value='<%= tasks["tasks"][i].text %>' readonly>
+                    <input type="text" class="form-control" value='<%= tasks[i].text %>' readonly>
                 </div>
             </div>
         <% } %>
